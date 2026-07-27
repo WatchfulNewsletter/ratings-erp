@@ -27,7 +27,7 @@ jobs:
       #   run: python esma_erp_downgrades.py --probe
 
       - name: Pull UK&I ERP downgrades
-        run: python esma_erp_downgrades.py --probe
+        run: python esma_erp_downgrades.py
 
       - name: Commit result
         run: |
