@@ -1,0 +1,26 @@
+[
+  {
+    "agency": "MOODYS",
+    "entity": "Apex Group Treasury Limited",
+    "country": "IRELAND",
+    "oldR": "",
+    "newR": "B3",
+    "action": "downgrade",
+    "date": "2026-07-24",
+    "headline": "MOODYS downgrades Apex Group Treasury Limited to B3",
+    "url": "",
+    "id": "ERP-MOODYS-254900P712DX6L6ALR57-2026-07-24"
+  },
+  {
+    "agency": "SP",
+    "entity": "South East Water (Finance) Ltd.",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "BB+",
+    "action": "downgrade",
+    "date": "2026-07-24",
+    "headline": "SP downgrades South East Water (Finance) Ltd. to BB+",
+    "url": "",
+    "id": "ERP-SP-213800N7DT5SON3MGN47-2026-07-24"
+  }
+]
