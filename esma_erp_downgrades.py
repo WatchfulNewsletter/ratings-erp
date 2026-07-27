@@ -1,0 +1,38 @@
+# .github/workflows/esma-erp.yml
+# Runs the ERP puller daily and commits erp_downgrades.json, which the Apps
+# Script tool fetches via RA_CONFIG.externalFeedUrl.
+name: ESMA ERP downgrades
+
+on:
+  schedule:
+    - cron: "30 5 * * *"     # 05:30 UTC daily, after the ERP's once-daily update
+  workflow_dispatch: {}       # lets you run it by hand, including a --probe run
+
+permissions:
+  contents: write             # needed to commit the JSON back to the repo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # First-time calibration: run once with the probe to print the ERP field
+      # names, then set the *_FIELD constants in the script and remove this step.
+      # - name: Probe ERP schema
+      #   run: python esma_erp_downgrades.py --probe
+
+      - name: Pull UK&I ERP downgrades
+        run: python esma_erp_downgrades.py
+
+      - name: Commit result
+        run: |
+          git config user.name  "erp-bot"
+          git config user.email "erp-bot@users.noreply.github.com"
+          git add erp_downgrades.json
+          git commit -m "Update ERP downgrades $(date -u +%FT%TZ)" || echo "no changes"
+          git push
