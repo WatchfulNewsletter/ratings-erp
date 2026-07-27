@@ -43,6 +43,7 @@ KEEP_TYPES = {"Corporate"}                   # drops Sovereign/public finance an
 EXCLUDE_SUBTYPES = set()                     # add "Financial institution" here to drop banks
 LOOKBACK_DAYS = 3                            # small daily window; the Apps Script tool dedupes
 AGENCY_MAP = [("MOODY", "MOODYS"), ("STANDARD & POOR", "SP"), ("S&P", "SP"), ("FITCH", "FITCH")]
+AGENCY_DISPLAY = {"MOODYS": "Moody's", "SP": "S&P", "FITCH": "Fitch", "OTHER": "A rating agency"}
 COUNTRY_NAME = {"GB": "United Kingdom", "IE": "Ireland",
                 "DE": "Germany", "AT": "Austria", "CH": "Switzerland"}
 
@@ -149,6 +150,7 @@ def main():
         new_r = norm(d.get("ratingValueLabel"))
         country = norm(d.get("countryName")) or COUNTRY_NAME.get(norm(d.get("countryCode")).upper(),
                                                                  norm(d.get("countryCode")))
+        disp = AGENCY_DISPLAY.get(ag, ag)
         out.append({
             "agency": ag,
             "entity": entity,
@@ -157,8 +159,8 @@ def main():
             "newR": new_r,
             "action": "downgrade",
             "date": day or norm(d.get("racValidityDatetime")),
-            "headline": ("%s downgrades %s to %s" % (ag, entity, new_r)) if new_r
-                        else ("%s downgrades %s" % (ag, entity)),
+            "headline": ("%s downgrades %s to %s" % (disp, entity, new_r)) if new_r
+                        else ("%s downgrades %s" % (disp, entity)),
             "url": "",
             "id": "ERP-%s-%s-%s" % (ag, lei, day),
         })
