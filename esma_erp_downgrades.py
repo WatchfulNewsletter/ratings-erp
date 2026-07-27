@@ -40,14 +40,18 @@ UA = "Mozilla/5.0 (compatible; RatingsWatchERP/1.0)"
 
 # --- field names: CONFIRM WITH A PROBE RUN, then edit ----------------------
 # Placeholders. The probe prints the real field names; set them here afterwards.
-ENTITY_FIELD  = "rated_entity_name"      # CONFIRM
-COUNTRY_FIELD = "country"                # CONFIRM (issuer domicile)
-RATING_FIELD  = "rating_value"           # CONFIRM (current rating)
-PRIOR_FIELD   = "previous_rating_value"  # CONFIRM (may not exist; see note 2)
-ACTION_FIELD  = "rating_action"          # CONFIRM (may not exist; see note 2)
-DATE_FIELD    = "rating_date"            # CONFIRM
-CRA_FIELD     = "cra_name"               # CONFIRM (agency)
-URL_FIELD     = "press_release_url"      # CONFIRM (may be absent)
+# Confirmed from the first probe (the action / child records):
+ACTION_FIELD  = "actionsActionTypeLabel"      # value is "Downgrade" (confirm exact spelling)
+RATING_FIELD  = "actionsRatingValueLabel"     # current (new) rating, e.g. "B"
+DATE_FIELD    = "actionsRacValidityDatetime"  # ISO datetime; the ...Str variant is YYYY-MM-DD
+PRIOR_FIELD   = ""                            # ERP has no previous-rating field; oldR stays blank
+ID_FIELD      = "id"                          # e.g. "RAC-719625"
+URL_FIELD     = "actionsPressReleases"        # an XML blob; parse for a link if one is present
+
+# Still to confirm from the PARENT record (the second probe prints it):
+ENTITY_FIELD  = ""   # CONFIRM: issuer name field on the parent
+COUNTRY_FIELD = ""   # CONFIRM: issuer domicile field on the parent
+CRA_FIELD     = ""   # CONFIRM: agency field on the parent
 
 # --- filters ---------------------------------------------------------------
 UKI = {"UNITED KINGDOM", "UK", "GB", "GREAT BRITAIN", "ENGLAND", "SCOTLAND",
@@ -87,23 +91,43 @@ def fetch(fq_list):
     return out
 
 
-def probe():
+def _probe_q(params, label):
+    print("\n=== %s ===" % label)
     try:
-        data = solr({"q": "*:*", "wt": "json", "rows": 3})
+        data = solr(params)
     except (HTTPError, URLError) as e:
-        print("PROBE FAILED to reach the SOLR endpoint:", e, file=sys.stderr)
-        print("If this is a 403/captcha, the radar SOLR core is gated; fall back "
-              "to the daily ERP open-data XML dump (same filtering, different fetch).",
-              file=sys.stderr)
-        sys.exit(1)
+        print("query failed:", e)
+        return {}
     resp = data.get("response", {})
-    docs = resp.get("docs", [])
     print("numFound:", resp.get("numFound"))
+    docs = resp.get("docs", [])
     if docs:
-        print("FIELD NAMES:", sorted(docs[0].keys()))
-        print("SAMPLE DOC:\n", json.dumps(docs[0], indent=2, ensure_ascii=False)[:2500])
-    else:
-        print("No docs returned. Re-check the CORE name.")
+        print("FIELDS:", sorted(docs[0].keys()))
+        print("SAMPLE:\n", json.dumps(docs[0], indent=2, ensure_ascii=False)[:2000])
+    return data
+
+
+def probe():
+    # 1) total record count
+    _probe_q({"q": "*:*", "wt": "json", "rows": 0}, "TOTAL")
+    # 2) a parent record: should carry the issuer name, country and agency
+    _probe_q({"q": "*:*", "fq": "type_s:parent", "wt": "json", "rows": 2},
+             "PARENT RECORD (type_s:parent)")
+    # 3) backup: any record that is not an action
+    _probe_q({"q": "*:*", "fq": "-entity_type:action", "wt": "json", "rows": 2},
+             "NON-ACTION RECORD")
+    # 4) a real downgrade action, to confirm the label spelling and its fields
+    _probe_q({"q": "*:*", "fq": 'actionsActionTypeLabel:"Downgrade"', "wt": "json", "rows": 2},
+             "DOWNGRADE ACTION")
+    # 5) every action-type label with its count
+    try:
+        d = solr({"q": "*:*", "wt": "json", "rows": 0, "facet": "true",
+                  "facet.field": "actionsActionTypeLabel", "facet.limit": "60"})
+        ff = d.get("facet_counts", {}).get("facet_fields", {}).get("actionsActionTypeLabel", [])
+        print("\n=== ACTION TYPE LABELS [label, count, ...] ===")
+        print(ff)
+    except (HTTPError, URLError) as e:
+        print("facet query failed:", e)
 
 
 def norm(v):
@@ -122,6 +146,15 @@ def main():
     if PROBE:
         probe()
         return
+
+    # Not finalised yet: the issuer name, country and agency live on the parent
+    # record, so the real run needs a two-query join (downgrade actions, then
+    # their parents by id). That is wired once the parent probe confirms the
+    # parent field names. Until then, refuse to run so we do not emit junk.
+    if not (ENTITY_FIELD and COUNTRY_FIELD and CRA_FIELD):
+        print("Parent fields not set. Run with --probe, send the parent schema, "
+              "then the join is wired in. Not running the extractor yet.", file=sys.stderr)
+        sys.exit(1)
 
     since = (dt.datetime.utcnow() - dt.timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%dT00:00:00Z")
 
