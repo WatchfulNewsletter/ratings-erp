@@ -40,18 +40,21 @@ UA = "Mozilla/5.0 (compatible; RatingsWatchERP/1.0)"
 
 # --- field names: CONFIRM WITH A PROBE RUN, then edit ----------------------
 # Placeholders. The probe prints the real field names; set them here afterwards.
-# Confirmed from the first probe (the action / child records):
-ACTION_FIELD  = "actionsActionTypeLabel"      # value is "Downgrade" (confirm exact spelling)
-RATING_FIELD  = "actionsRatingValueLabel"     # current (new) rating, e.g. "B"
-DATE_FIELD    = "actionsRacValidityDatetime"  # ISO datetime; the ...Str variant is YYYY-MM-DD
-PRIOR_FIELD   = ""                            # ERP has no previous-rating field; oldR stays blank
-ID_FIELD      = "id"                          # e.g. "RAC-719625"
-URL_FIELD     = "actionsPressReleases"        # an XML blob; parse for a link if one is present
-
-# Still to confirm from the PARENT record (the second probe prints it):
-ENTITY_FIELD  = ""   # CONFIRM: issuer name field on the parent
-COUNTRY_FIELD = ""   # CONFIRM: issuer domicile field on the parent
-CRA_FIELD     = ""   # CONFIRM: agency field on the parent
+# --- ERP data model (confirmed by probes) ----------------------------------
+# PARENT records (type_s:parent, entity_type:radar) carry everything we need,
+# including the LATEST action, so we query parents directly with no child join.
+ENTITY_FIELD    = "issuerName"             # issuer name
+COUNTRY_FIELD   = "countryCode"            # ISO domicile: GB, IE, DE, ...
+CRA_FIELD       = "craName"                # agency (mapped to MOODYS / SP / FITCH)
+RATING_FIELD    = "ratingValueLabel"       # current rating on the parent
+ACTION_FIELD    = "lastActionTypeLabel"    # latest action, e.g. "Affirmation"; downgrade label TBC
+TYPE_FIELD      = "ratingTypeDescr"        # "Corporate" for corporates
+DATE_FIELD      = "racValidityDatetimeStr" # YYYY-MM-DD of the latest action
+LEI_FIELD       = "issuerLeiCode"          # dedupe an issuer rated on many instruments
+ID_FIELD        = "id"
+PRIOR_FIELD     = ""                       # ERP carries no previous-rating field; oldR stays blank
+DOWNGRADE_LABEL = ""                       # CONFIRM from round 3, then the extractor runs
+UKI_CODES = {"GB", "IE"}                   # add DACH ISO codes (DE, AT, CH) to widen later
 
 # --- filters ---------------------------------------------------------------
 UKI = {"UNITED KINGDOM", "UK", "GB", "GREAT BRITAIN", "ENGLAND", "SCOTLAND",
@@ -91,43 +94,44 @@ def fetch(fq_list):
     return out
 
 
-def _probe_q(params, label):
-    print("\n=== %s ===" % label)
-    try:
-        data = solr(params)
-    except (HTTPError, URLError) as e:
-        print("query failed:", e)
-        return {}
-    resp = data.get("response", {})
-    print("numFound:", resp.get("numFound"))
-    docs = resp.get("docs", [])
-    if docs:
-        print("FIELDS:", sorted(docs[0].keys()))
-        print("SAMPLE:\n", json.dumps(docs[0], indent=2, ensure_ascii=False)[:2000])
-    return data
+def _count(fq):
+    d = solr({"q": "*:*", "fq": fq, "wt": "json", "rows": 0})
+    return d.get("response", {}).get("numFound")
 
 
 def probe():
-    # 1) total record count
-    _probe_q({"q": "*:*", "wt": "json", "rows": 0}, "TOTAL")
-    # 2) a parent record: should carry the issuer name, country and agency
-    _probe_q({"q": "*:*", "fq": "type_s:parent", "wt": "json", "rows": 2},
-             "PARENT RECORD (type_s:parent)")
-    # 3) backup: any record that is not an action
-    _probe_q({"q": "*:*", "fq": "-entity_type:action", "wt": "json", "rows": 2},
-             "NON-ACTION RECORD")
-    # 4) a real downgrade action, to confirm the label spelling and its fields
-    _probe_q({"q": "*:*", "fq": 'actionsActionTypeLabel:"Downgrade"', "wt": "json", "rows": 2},
-             "DOWNGRADE ACTION")
-    # 5) every action-type label with its count
+    P = "type_s:parent"
+    # A) does country filtering work? counts for UK, Ireland, Germany
+    for cc in ["GB", "IE", "DE"]:
+        try:
+            print("parents countryCode=%s -> numFound=%s" % (cc, _count([P, "countryCode:%s" % cc])))
+        except Exception as e:
+            print("countryCode:%s failed: %s" % (cc, e))
+    # B) is lastActionTypeLabel filterable, and what is the downgrade wording?
+    #    "Affirmation" is known to exist, so it tests filterability; the rest test wording.
+    for lbl in ["Affirmation", "New", "Upgrade", "Downgrade", "Downgraded", "Rating downgrade"]:
+        try:
+            print("parents lastActionTypeLabel=%r -> numFound=%s" % (lbl, _count([P, 'lastActionTypeLabel:"%s"' % lbl])))
+        except Exception as e:
+            print("lastActionTypeLabel:%r failed: %s" % (lbl, e))
+    # C) does date-range filtering work? GB parents since 2025-01-01
     try:
-        d = solr({"q": "*:*", "wt": "json", "rows": 0, "facet": "true",
-                  "facet.field": "actionsActionTypeLabel", "facet.limit": "60"})
-        ff = d.get("facet_counts", {}).get("facet_fields", {}).get("actionsActionTypeLabel", [])
-        print("\n=== ACTION TYPE LABELS [label, count, ...] ===")
-        print(ff)
-    except (HTTPError, URLError) as e:
-        print("facet query failed:", e)
+        print("GB parents since 2025-01-01 -> numFound=%s" %
+              _count([P, "countryCode:GB", "racValidityDatetimeStr:[2025-01-01 TO *]"]))
+    except Exception as e:
+        print("date-range query failed: %s" % e)
+    # D) real GB parent samples, newest first if sortable, revealing the label vocabulary
+    fl = ("issuerName,issuerLeiCode,countryCode,countryName,craName,ratedObjectValue,"
+          "ratingTypeDescr,subType,industryTypeValue,timeHorizonDescr,lastActionTypeLabel,"
+          "ratingValueLabel,racValidityDatetimeStr,ratingIssuanceLocationDesc,solicitationStatus,id")
+    base = {"q": "*:*", "fq": [P, "countryCode:GB"], "wt": "json", "rows": 15, "fl": fl}
+    try:
+        d = solr(dict(base, sort="racValidityDatetime desc"))
+    except Exception:
+        d = solr(base)
+    print("\n=== up to 15 GB parent records ===")
+    for doc in d.get("response", {}).get("docs", []):
+        print(json.dumps(doc, ensure_ascii=False))
 
 
 def norm(v):
@@ -147,13 +151,12 @@ def main():
         probe()
         return
 
-    # Not finalised yet: the issuer name, country and agency live on the parent
-    # record, so the real run needs a two-query join (downgrade actions, then
-    # their parents by id). That is wired once the parent probe confirms the
-    # parent field names. Until then, refuse to run so we do not emit junk.
-    if not (ENTITY_FIELD and COUNTRY_FIELD and CRA_FIELD):
-        print("Parent fields not set. Run with --probe, send the parent schema, "
-              "then the join is wired in. Not running the extractor yet.", file=sys.stderr)
+    # Not finalised yet: the extractor gets its exact downgrade label and query
+    # wired in after round 3 confirms it. Until then, refuse to run so we do not
+    # emit junk or a misleading empty file.
+    if not (ENTITY_FIELD and COUNTRY_FIELD and CRA_FIELD and DOWNGRADE_LABEL):
+        print("Not finalised: run with --probe, send the output, and the extractor "
+              "gets its downgrade label and query wired in. Not running yet.", file=sys.stderr)
         sys.exit(1)
 
     since = (dt.datetime.utcnow() - dt.timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%dT00:00:00Z")
