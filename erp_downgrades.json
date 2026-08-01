@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "agency": "SP",
+    "entity": "Petra Diamonds US Treasury PLC",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "CCC",
+    "action": "downgrade",
+    "date": "2026-07-31",
+    "headline": "S&P downgrades Petra Diamonds US Treasury PLC to CCC",
+    "url": "",
+    "id": "ERP-SP-635400LZYOO6WHAO2H58-2026-07-31"
+  }
+]
