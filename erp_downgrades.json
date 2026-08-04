@@ -1,14 +1,26 @@
 [
   {
     "agency": "SP",
-    "entity": "Petra Diamonds US Treasury PLC",
+    "entity": "Acacium Group Ltd.",
     "country": "UNITED KINGDOM",
     "oldR": "",
-    "newR": "CCC",
+    "newR": "SD",
     "action": "downgrade",
-    "date": "2026-07-31",
-    "headline": "S&P downgrades Petra Diamonds US Treasury PLC to CCC",
+    "date": "2026-08-03",
+    "headline": "S&P downgrades Acacium Group Ltd. to SD",
     "url": "",
-    "id": "ERP-SP-635400LZYOO6WHAO2H58-2026-07-31"
+    "id": "ERP-SP-Acacium Group Ltd.-2026-08-03"
+  },
+  {
+    "agency": "SP",
+    "entity": "Impala Bidco 0 Ltd.",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "D",
+    "action": "downgrade",
+    "date": "2026-08-03",
+    "headline": "S&P downgrades Impala Bidco 0 Ltd. to D",
+    "url": "",
+    "id": "ERP-SP-259400LN2RY29XJ6PM24-2026-08-03"
   }
 ]
