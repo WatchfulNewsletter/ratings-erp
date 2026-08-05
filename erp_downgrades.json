@@ -1,5 +1,17 @@
 [
   {
+    "agency": "FITCH",
+    "entity": "Energean plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B+",
+    "action": "downgrade",
+    "date": "2026-08-04",
+    "headline": "Fitch downgrades Energean plc to B+",
+    "url": "",
+    "id": "ERP-FITCH-549300RVMKU0CYUZBB05-2026-08-04"
+  },
+  {
     "agency": "SP",
     "entity": "Acacium Group Ltd.",
     "country": "UNITED KINGDOM",
