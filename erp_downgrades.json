@@ -1,5 +1,29 @@
 [
   {
+    "agency": "SP",
+    "entity": "Hig Finance 2 Ltd.",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B-",
+    "action": "downgrade",
+    "date": "2026-08-06",
+    "headline": "S&P downgrades Hig Finance 2 Ltd. to B-",
+    "url": "",
+    "id": "ERP-SP-213800OOZO37Y7YL2O58-2026-08-06"
+  },
+  {
+    "agency": "SP",
+    "entity": "Howden Group Holdings Ltd.",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B-",
+    "action": "downgrade",
+    "date": "2026-08-06",
+    "headline": "S&P downgrades Howden Group Holdings Ltd. to B-",
+    "url": "",
+    "id": "ERP-SP-875500V3HPKZIQP10J32-2026-08-06"
+  },
+  {
     "agency": "FITCH",
     "entity": "Energean plc",
     "country": "UNITED KINGDOM",
@@ -10,29 +34,5 @@
     "headline": "Fitch downgrades Energean plc to B+",
     "url": "",
     "id": "ERP-FITCH-549300RVMKU0CYUZBB05-2026-08-04"
-  },
-  {
-    "agency": "SP",
-    "entity": "Acacium Group Ltd.",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "SD",
-    "action": "downgrade",
-    "date": "2026-08-03",
-    "headline": "S&P downgrades Acacium Group Ltd. to SD",
-    "url": "",
-    "id": "ERP-SP-Acacium Group Ltd.-2026-08-03"
-  },
-  {
-    "agency": "SP",
-    "entity": "Impala Bidco 0 Ltd.",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "D",
-    "action": "downgrade",
-    "date": "2026-08-03",
-    "headline": "S&P downgrades Impala Bidco 0 Ltd. to D",
-    "url": "",
-    "id": "ERP-SP-259400LN2RY29XJ6PM24-2026-08-03"
   }
 ]
