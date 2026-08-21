@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "agency": "FITCH",
+    "entity": "HX Hold Co Ltd",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "C",
+    "action": "downgrade",
+    "date": "2026-08-20",
+    "headline": "Fitch downgrades HX Hold Co Ltd to C",
+    "url": "",
+    "id": "ERP-FITCH-2138004WV2GA7GI77I96-2026-08-20"
+  }
+]
