@@ -10,29 +10,5 @@
     "headline": "Moody's downgrades Ineos Finance plc to B2",
     "url": "",
     "id": "ERP-MOODYS-2138002D68XDR4LZCG32-2026-08-21"
-  },
-  {
-    "agency": "FITCH",
-    "entity": "LCPR Senior Secured Financing Designated Activity Company",
-    "country": "IRELAND",
-    "oldR": "",
-    "newR": "CCC-",
-    "action": "downgrade",
-    "date": "2026-08-20",
-    "headline": "Fitch downgrades LCPR Senior Secured Financing Designated Activity Company to CCC-",
-    "url": "",
-    "id": "ERP-FITCH-549300LE5FM8IKMXSP90-2026-08-20"
-  },
-  {
-    "agency": "FITCH",
-    "entity": "HX Hold Co Ltd",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "C",
-    "action": "downgrade",
-    "date": "2026-08-20",
-    "headline": "Fitch downgrades HX Hold Co Ltd to C",
-    "url": "",
-    "id": "ERP-FITCH-2138004WV2GA7GI77I96-2026-08-20"
   }
 ]
