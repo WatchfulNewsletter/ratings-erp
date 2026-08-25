@@ -1,14 +1,14 @@
 [
   {
-    "agency": "MOODYS",
-    "entity": "Ineos Finance plc",
+    "agency": "SP",
+    "entity": "Uliving@Essex Issuerco PLC",
     "country": "UNITED KINGDOM",
     "oldR": "",
-    "newR": "B2",
+    "newR": "CCC+",
     "action": "downgrade",
-    "date": "2026-08-21",
-    "headline": "Moody's downgrades Ineos Finance plc to B2",
+    "date": "2026-08-24",
+    "headline": "S&P downgrades Uliving@Essex Issuerco PLC to CCC+",
     "url": "",
-    "id": "ERP-MOODYS-2138002D68XDR4LZCG32-2026-08-21"
+    "id": "ERP-SP-213800YKPHTN89TL4249-2026-08-24"
   }
 ]
