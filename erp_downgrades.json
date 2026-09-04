@@ -1,5 +1,29 @@
 [
   {
+    "agency": "MOODYS",
+    "entity": "Auxey Bidco Ltd",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B3",
+    "action": "downgrade",
+    "date": "2026-09-02",
+    "headline": "Moody's downgrades Auxey Bidco Ltd to B3",
+    "url": "",
+    "id": "ERP-MOODYS-213800NC9KFDXTICTU17-2026-09-02"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Auxey Midco Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B3",
+    "action": "downgrade",
+    "date": "2026-09-02",
+    "headline": "Moody's downgrades Auxey Midco Limited to B3",
+    "url": "",
+    "id": "ERP-MOODYS-Auxey Midco Limited-2026-09-02"
+  },
+  {
     "agency": "SP",
     "entity": "Impala Bidco 0 Ltd.",
     "country": "UNITED KINGDOM",
