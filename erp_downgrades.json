@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "agency": "FITCH",
+    "entity": "Auxey Midco Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B-",
+    "action": "downgrade",
+    "date": "2026-09-11",
+    "headline": "Fitch downgrades Auxey Midco Limited to B-",
+    "url": "",
+    "id": "ERP-FITCH-Auxey Midco Limited-2026-09-11"
+  },
+  {
+    "agency": "FITCH",
+    "entity": "Auxey Bidco Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B",
+    "action": "downgrade",
+    "date": "2026-09-11",
+    "headline": "Fitch downgrades Auxey Bidco Limited to B",
+    "url": "",
+    "id": "ERP-FITCH-213800NC9KFDXTICTU17-2026-09-11"
+  }
+]
