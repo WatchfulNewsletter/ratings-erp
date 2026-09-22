@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "agency": "FITCH",
+    "entity": "Eversholt Investment Limited",
+    "country": "IRELAND",
+    "oldR": "",
+    "newR": "BBB-",
+    "action": "downgrade",
+    "date": "2026-09-21",
+    "headline": "Fitch downgrades Eversholt Investment Limited to BBB-",
+    "url": "",
+    "id": "ERP-FITCH-Eversholt Investment Limited-2026-09-21"
+  },
+  {
+    "agency": "FITCH",
+    "entity": "Eversholt UK Rails (Holding) Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "BBB-",
+    "action": "downgrade",
+    "date": "2026-09-21",
+    "headline": "Fitch downgrades Eversholt UK Rails (Holding) Limited to BBB-",
+    "url": "",
+    "id": "ERP-FITCH-Eversholt UK Rails (Holding) Limited-2026-09-21"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Impala Bidco 0 Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "Ca-PD",
+    "action": "downgrade",
+    "date": "2026-09-20",
+    "headline": "Moody's downgrades Impala Bidco 0 Limited to Ca-PD",
+    "url": "",
+    "id": "ERP-MOODYS-259400LN2RY29XJ6PM24-2026-09-20"
+  }
+]
