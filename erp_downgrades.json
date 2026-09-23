@@ -1,5 +1,29 @@
 [
   {
+    "agency": "MOODYS",
+    "entity": "Mondi Plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "Baa2",
+    "action": "downgrade",
+    "date": "2026-09-22",
+    "headline": "Moody's downgrades Mondi Plc to Baa2",
+    "url": "",
+    "id": "ERP-MOODYS-213800LOZA69QFDC9N34-2026-09-22"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Mondi Finance plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "Baa2",
+    "action": "downgrade",
+    "date": "2026-09-22",
+    "headline": "Moody's downgrades Mondi Finance plc to Baa2",
+    "url": "",
+    "id": "ERP-MOODYS-213800BJV32JT6IRCS96-2026-09-22"
+  },
+  {
     "agency": "FITCH",
     "entity": "Eversholt Investment Limited",
     "country": "IRELAND",
