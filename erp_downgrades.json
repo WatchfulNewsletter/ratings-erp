@@ -34,29 +34,5 @@
     "headline": "Moody's downgrades Mondi Finance plc to Baa2",
     "url": "",
     "id": "ERP-MOODYS-213800BJV32JT6IRCS96-2026-09-22"
-  },
-  {
-    "agency": "FITCH",
-    "entity": "Eversholt Investment Limited",
-    "country": "IRELAND",
-    "oldR": "",
-    "newR": "BBB-",
-    "action": "downgrade",
-    "date": "2026-09-21",
-    "headline": "Fitch downgrades Eversholt Investment Limited to BBB-",
-    "url": "",
-    "id": "ERP-FITCH-Eversholt Investment Limited-2026-09-21"
-  },
-  {
-    "agency": "FITCH",
-    "entity": "Eversholt UK Rails (Holding) Limited",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "BBB-",
-    "action": "downgrade",
-    "date": "2026-09-21",
-    "headline": "Fitch downgrades Eversholt UK Rails (Holding) Limited to BBB-",
-    "url": "",
-    "id": "ERP-FITCH-Eversholt UK Rails (Holding) Limited-2026-09-21"
   }
 ]
