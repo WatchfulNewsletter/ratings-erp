@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "agency": "MOODYS",
+    "entity": "South West Water Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "Baa2",
+    "action": "downgrade",
+    "date": "2026-10-07",
+    "headline": "Moody's downgrades South West Water Limited to Baa2",
+    "url": "",
+    "id": "ERP-MOODYS-213800FR2VAOKRYRHX45-2026-10-07"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Sutton and East Surrey Water plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "Baa2",
+    "action": "downgrade",
+    "date": "2026-10-07",
+    "headline": "Moody's downgrades Sutton and East Surrey Water plc to Baa2",
+    "url": "",
+    "id": "ERP-MOODYS-8945002Z0AYSPBV79034-2026-10-07"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "South West Water Finance plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "Baa2",
+    "action": "downgrade",
+    "date": "2026-10-07",
+    "headline": "Moody's downgrades South West Water Finance plc to Baa2",
+    "url": "",
+    "id": "ERP-MOODYS-213800OV68U446W4NV89-2026-10-07"
+  }
+]
