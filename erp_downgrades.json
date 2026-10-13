@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "agency": "SP",
+    "entity": "Bowtie Germany Bidco Gmbh",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B-",
+    "action": "downgrade",
+    "date": "2026-10-12",
+    "headline": "S&P downgrades Bowtie Germany Bidco Gmbh to B-",
+    "url": "",
+    "id": "ERP-SP-254900F23Z2F8RRW1Q10-2026-10-12"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Lunar Funding V Plc",
+    "country": "IRELAND",
+    "oldR": "",
+    "newR": "A2",
+    "action": "downgrade",
+    "date": "2026-10-12",
+    "headline": "Moody's downgrades Lunar Funding V Plc to A2",
+    "url": "",
+    "id": "ERP-MOODYS-213800BNPFXIGDAFQL81-2026-10-12"
+  }
+]
