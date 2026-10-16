@@ -1,6 +1,42 @@
 [
   {
     "agency": "SP",
+    "entity": "Liberty Living Finance PLC",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "BBB",
+    "action": "downgrade",
+    "date": "2026-10-15",
+    "headline": "S&P downgrades Liberty Living Finance PLC to BBB",
+    "url": "",
+    "id": "ERP-SP-635400BGCBXWHVIUMJ26-2026-10-15"
+  },
+  {
+    "agency": "SP",
+    "entity": "Unite Group PLC",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "BBB",
+    "action": "downgrade",
+    "date": "2026-10-15",
+    "headline": "S&P downgrades Unite Group PLC to BBB",
+    "url": "",
+    "id": "ERP-SP-213800BBUUWVDH9YI827-2026-10-15"
+  },
+  {
+    "agency": "FITCH",
+    "entity": "TalkTalk Telecom Group Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "D",
+    "action": "downgrade",
+    "date": "2026-10-15",
+    "headline": "Fitch downgrades TalkTalk Telecom Group Limited to D",
+    "url": "",
+    "id": "ERP-FITCH-213800WF53FVDRRHRF44-2026-10-15"
+  },
+  {
+    "agency": "SP",
     "entity": "TalkTalk Telecom Group Limited",
     "country": "UNITED KINGDOM",
     "oldR": "",
@@ -22,29 +58,5 @@
     "headline": "S&P downgrades TalkTalk Holdings Ltd. to D",
     "url": "",
     "id": "ERP-SP-TalkTalk Holdings Ltd.-2026-10-14"
-  },
-  {
-    "agency": "SP",
-    "entity": "Bowtie Germany Bidco Gmbh",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "B-",
-    "action": "downgrade",
-    "date": "2026-10-12",
-    "headline": "S&P downgrades Bowtie Germany Bidco Gmbh to B-",
-    "url": "",
-    "id": "ERP-SP-254900F23Z2F8RRW1Q10-2026-10-12"
-  },
-  {
-    "agency": "MOODYS",
-    "entity": "Lunar Funding V Plc",
-    "country": "IRELAND",
-    "oldR": "",
-    "newR": "A2",
-    "action": "downgrade",
-    "date": "2026-10-12",
-    "headline": "Moody's downgrades Lunar Funding V Plc to A2",
-    "url": "",
-    "id": "ERP-MOODYS-213800BNPFXIGDAFQL81-2026-10-12"
   }
 ]
