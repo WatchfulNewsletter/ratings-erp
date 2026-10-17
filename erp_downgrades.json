@@ -1,5 +1,29 @@
 [
   {
+    "agency": "FITCH",
+    "entity": "Dechra Topco Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B",
+    "action": "downgrade",
+    "date": "2026-10-16",
+    "headline": "Fitch downgrades Dechra Topco Limited to B",
+    "url": "",
+    "id": "ERP-FITCH-Dechra Topco Limited-2026-10-16"
+  },
+  {
+    "agency": "FITCH",
+    "entity": "Dechra Pharmaceuticals Holdings Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B+",
+    "action": "downgrade",
+    "date": "2026-10-16",
+    "headline": "Fitch downgrades Dechra Pharmaceuticals Holdings Limited to B+",
+    "url": "",
+    "id": "ERP-FITCH-254900O65L5G9CGTAS28-2026-10-16"
+  },
+  {
     "agency": "SP",
     "entity": "Liberty Living Finance PLC",
     "country": "UNITED KINGDOM",
