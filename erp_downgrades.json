@@ -58,29 +58,5 @@
     "headline": "Fitch downgrades TalkTalk Telecom Group Limited to D",
     "url": "",
     "id": "ERP-FITCH-213800WF53FVDRRHRF44-2026-10-15"
-  },
-  {
-    "agency": "SP",
-    "entity": "TalkTalk Telecom Group Limited",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "D",
-    "action": "downgrade",
-    "date": "2026-10-14",
-    "headline": "S&P downgrades TalkTalk Telecom Group Limited to D",
-    "url": "",
-    "id": "ERP-SP-213800WF53FVDRRHRF44-2026-10-14"
-  },
-  {
-    "agency": "SP",
-    "entity": "TalkTalk Holdings Ltd.",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "D",
-    "action": "downgrade",
-    "date": "2026-10-14",
-    "headline": "S&P downgrades TalkTalk Holdings Ltd. to D",
-    "url": "",
-    "id": "ERP-SP-TalkTalk Holdings Ltd.-2026-10-14"
   }
 ]
