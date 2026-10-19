@@ -1,18 +1,6 @@
 [
   {
     "agency": "FITCH",
-    "entity": "Dechra Topco Limited",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "B",
-    "action": "downgrade",
-    "date": "2026-10-16",
-    "headline": "Fitch downgrades Dechra Topco Limited to B",
-    "url": "",
-    "id": "ERP-FITCH-Dechra Topco Limited-2026-10-16"
-  },
-  {
-    "agency": "FITCH",
     "entity": "Dechra Pharmaceuticals Holdings Limited",
     "country": "UNITED KINGDOM",
     "oldR": "",
@@ -24,39 +12,15 @@
     "id": "ERP-FITCH-254900O65L5G9CGTAS28-2026-10-16"
   },
   {
-    "agency": "SP",
-    "entity": "Liberty Living Finance PLC",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "BBB",
-    "action": "downgrade",
-    "date": "2026-10-15",
-    "headline": "S&P downgrades Liberty Living Finance PLC to BBB",
-    "url": "",
-    "id": "ERP-SP-635400BGCBXWHVIUMJ26-2026-10-15"
-  },
-  {
-    "agency": "SP",
-    "entity": "Unite Group PLC",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "BBB",
-    "action": "downgrade",
-    "date": "2026-10-15",
-    "headline": "S&P downgrades Unite Group PLC to BBB",
-    "url": "",
-    "id": "ERP-SP-213800BBUUWVDH9YI827-2026-10-15"
-  },
-  {
     "agency": "FITCH",
-    "entity": "TalkTalk Telecom Group Limited",
+    "entity": "Dechra Topco Limited",
     "country": "UNITED KINGDOM",
     "oldR": "",
-    "newR": "D",
+    "newR": "B",
     "action": "downgrade",
-    "date": "2026-10-15",
-    "headline": "Fitch downgrades TalkTalk Telecom Group Limited to D",
+    "date": "2026-10-16",
+    "headline": "Fitch downgrades Dechra Topco Limited to B",
     "url": "",
-    "id": "ERP-FITCH-213800WF53FVDRRHRF44-2026-10-15"
+    "id": "ERP-FITCH-Dechra Topco Limited-2026-10-16"
   }
 ]
