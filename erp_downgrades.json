@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "agency": "MOODYS",
+    "entity": "Purmo Group Holdco (UK) Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B3",
+    "action": "downgrade",
+    "date": "2026-10-20",
+    "headline": "Moody's downgrades Purmo Group Holdco (UK) Limited to B3",
+    "url": "",
+    "id": "ERP-MOODYS-984500FFFEEBB2C1WL90-2026-10-20"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Purmo Group Finco (UK) Plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "Caa1",
+    "action": "downgrade",
+    "date": "2026-10-20",
+    "headline": "Moody's downgrades Purmo Group Finco (UK) Plc to Caa1",
+    "url": "",
+    "id": "ERP-MOODYS-984500555ED7B8666028-2026-10-20"
+  }
+]
