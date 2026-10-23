@@ -1,5 +1,29 @@
 [
   {
+    "agency": "SP",
+    "entity": "Co-operative Group Ltd.",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B+",
+    "action": "downgrade",
+    "date": "2026-10-22",
+    "headline": "S&P downgrades Co-operative Group Ltd. to B+",
+    "url": "",
+    "id": "ERP-SP-213800TKR59ER8Z69V16-2026-10-22"
+  },
+  {
+    "agency": "SP",
+    "entity": "LCPR Senior Secured Financing DAC",
+    "country": "IRELAND",
+    "oldR": "",
+    "newR": "CCC",
+    "action": "downgrade",
+    "date": "2026-10-21",
+    "headline": "S&P downgrades LCPR Senior Secured Financing DAC to CCC",
+    "url": "",
+    "id": "ERP-SP-549300LE5FM8IKMXSP90-2026-10-21"
+  },
+  {
     "agency": "MOODYS",
     "entity": "Purmo Group Holdco (UK) Limited",
     "country": "UNITED KINGDOM",
