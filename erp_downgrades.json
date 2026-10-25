@@ -1,5 +1,125 @@
 [
   {
+    "agency": "FITCH",
+    "entity": "PCC Global Plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B-",
+    "action": "downgrade",
+    "date": "2026-10-23",
+    "headline": "Fitch downgrades PCC Global Plc to B-",
+    "url": "",
+    "id": "ERP-FITCH-PCC Global Plc-2026-10-23"
+  },
+  {
+    "agency": "FITCH",
+    "entity": "South West Water Finance Plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "BBB+",
+    "action": "downgrade",
+    "date": "2026-10-23",
+    "headline": "Fitch downgrades South West Water Finance Plc to BBB+",
+    "url": "",
+    "id": "ERP-FITCH-213800OV68U446W4NV89-2026-10-23"
+  },
+  {
+    "agency": "FITCH",
+    "entity": "South West Water Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "BBB",
+    "action": "downgrade",
+    "date": "2026-10-23",
+    "headline": "Fitch downgrades South West Water Limited to BBB",
+    "url": "",
+    "id": "ERP-FITCH-213800FR2VAOKRYRHX45-2026-10-23"
+  },
+  {
+    "agency": "SP",
+    "entity": "PCC Global Plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B",
+    "action": "downgrade",
+    "date": "2026-10-23",
+    "headline": "S&P downgrades PCC Global Plc to B",
+    "url": "",
+    "id": "ERP-SP-98450001B6E3050FE742-2026-10-23"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Virgin Media Finance PLC",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B3",
+    "action": "downgrade",
+    "date": "2026-10-22",
+    "headline": "Moody's downgrades Virgin Media Finance PLC to B3",
+    "url": "",
+    "id": "ERP-MOODYS-2138001LVYC87DDHT482-2026-10-22"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Virgin Media O2 Vendor Financing Notes VI DAC",
+    "country": "IRELAND",
+    "oldR": "",
+    "newR": "B3",
+    "action": "downgrade",
+    "date": "2026-10-22",
+    "headline": "Moody's downgrades Virgin Media O2 Vendor Financing Notes VI DAC to B3",
+    "url": "",
+    "id": "ERP-MOODYS-Virgin Media O2 Vendor Financing Notes VI DAC-2026-10-22"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Virgin Media O2 Vendor Financing Notes V DAC",
+    "country": "IRELAND",
+    "oldR": "",
+    "newR": "B3",
+    "action": "downgrade",
+    "date": "2026-10-22",
+    "headline": "Moody's downgrades Virgin Media O2 Vendor Financing Notes V DAC to B3",
+    "url": "",
+    "id": "ERP-MOODYS-635400ASSEVCXAPVGC36-2026-10-22"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Virgin Media O2 VFN VII DAC",
+    "country": "IRELAND",
+    "oldR": "",
+    "newR": "B3",
+    "action": "downgrade",
+    "date": "2026-10-22",
+    "headline": "Moody's downgrades Virgin Media O2 VFN VII DAC to B3",
+    "url": "",
+    "id": "ERP-MOODYS-Virgin Media O2 VFN VII DAC-2026-10-22"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Virgin Media O2 VFN VIII DAC",
+    "country": "IRELAND",
+    "oldR": "",
+    "newR": "B3",
+    "action": "downgrade",
+    "date": "2026-10-22",
+    "headline": "Moody's downgrades Virgin Media O2 VFN VIII DAC to B3",
+    "url": "",
+    "id": "ERP-MOODYS-Virgin Media O2 VFN VIII DAC-2026-10-22"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "VMED O2 UK Holdings Limited",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "B1-PD",
+    "action": "downgrade",
+    "date": "2026-10-22",
+    "headline": "Moody's downgrades VMED O2 UK Holdings Limited to B1-PD",
+    "url": "",
+    "id": "ERP-MOODYS-VMED O2 UK Holdings Limited-2026-10-22"
+  },
+  {
     "agency": "SP",
     "entity": "Co-operative Group Ltd.",
     "country": "UNITED KINGDOM",
@@ -10,41 +130,5 @@
     "headline": "S&P downgrades Co-operative Group Ltd. to B+",
     "url": "",
     "id": "ERP-SP-213800TKR59ER8Z69V16-2026-10-22"
-  },
-  {
-    "agency": "SP",
-    "entity": "LCPR Senior Secured Financing DAC",
-    "country": "IRELAND",
-    "oldR": "",
-    "newR": "CCC",
-    "action": "downgrade",
-    "date": "2026-10-21",
-    "headline": "S&P downgrades LCPR Senior Secured Financing DAC to CCC",
-    "url": "",
-    "id": "ERP-SP-549300LE5FM8IKMXSP90-2026-10-21"
-  },
-  {
-    "agency": "MOODYS",
-    "entity": "Purmo Group Holdco (UK) Limited",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "B3",
-    "action": "downgrade",
-    "date": "2026-10-20",
-    "headline": "Moody's downgrades Purmo Group Holdco (UK) Limited to B3",
-    "url": "",
-    "id": "ERP-MOODYS-984500FFFEEBB2C1WL90-2026-10-20"
-  },
-  {
-    "agency": "MOODYS",
-    "entity": "Purmo Group Finco (UK) Plc",
-    "country": "UNITED KINGDOM",
-    "oldR": "",
-    "newR": "Caa1",
-    "action": "downgrade",
-    "date": "2026-10-20",
-    "headline": "Moody's downgrades Purmo Group Finco (UK) Plc to Caa1",
-    "url": "",
-    "id": "ERP-MOODYS-984500555ED7B8666028-2026-10-20"
   }
 ]
