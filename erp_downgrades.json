@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "agency": "SP",
+    "entity": "Thames Water Utilities Finance Plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "C",
+    "action": "downgrade",
+    "date": "2026-10-27",
+    "headline": "S&P downgrades Thames Water Utilities Finance Plc to C",
+    "url": "",
+    "id": "ERP-SP-213800ESMPQ4RQ7G8351-2026-10-27"
+  },
+  {
+    "agency": "SP",
+    "entity": "Thames Water Utilities Ltd.",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "CCC-",
+    "action": "downgrade",
+    "date": "2026-10-27",
+    "headline": "S&P downgrades Thames Water Utilities Ltd. to CCC-",
+    "url": "",
+    "id": "ERP-SP-213800JKM5UQHFJOTZ25-2026-10-27"
+  }
+]
