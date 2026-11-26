@@ -1,5 +1,29 @@
 [
   {
+    "agency": "MOODYS",
+    "entity": "Motion Bondco DAC",
+    "country": "IRELAND",
+    "oldR": "",
+    "newR": "Caa3",
+    "action": "downgrade",
+    "date": "2026-11-25",
+    "headline": "Moody's downgrades Motion Bondco DAC to Caa3",
+    "url": "",
+    "id": "ERP-MOODYS-635400KFD3IETNQLA755-2026-11-25"
+  },
+  {
+    "agency": "MOODYS",
+    "entity": "Tronox Holdings Plc",
+    "country": "UNITED KINGDOM",
+    "oldR": "",
+    "newR": "Caa2",
+    "action": "downgrade",
+    "date": "2026-11-24",
+    "headline": "Moody's downgrades Tronox Holdings Plc to Caa2",
+    "url": "",
+    "id": "ERP-MOODYS-549300NRVC84SGJSXV06-2026-11-24"
+  },
+  {
     "agency": "SP",
     "entity": "Aragvi Finance International DAC",
     "country": "IRELAND",
